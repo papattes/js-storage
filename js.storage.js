@@ -536,8 +536,9 @@
             _path: null,
             _domain: null,
             _secure: false,
+            _samesite: false,
             setItem: function (n, v) {
-                Cookies.set(this._prefix + n, v, {expires: this._expires, path: this._path, domain: this._domain, secure: this._secure});
+                Cookies.set(this._prefix + n, v, {expires: this._expires, path: this._path, domain: this._domain, secure: this._secure, samesite: this._samesite});
             },
             getItem: function (n) {
                 return Cookies.get(this._prefix + n);
